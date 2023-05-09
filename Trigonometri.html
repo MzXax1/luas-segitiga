@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Trigonometri Calculator</title>
+	
+</head>
+<body>
+	<h1>Trigonometri Calculator</h1>
+	<p>Masukkan sudut dalam derajat:</p>
+	<input type="number" id="sudut" name="sudut" value="0">
+	<br>
+	<br>
+	<button onclick="hitungSin()">Hitung Sin</button>
+	<button onclick="hitungCos()">Hitung Cos</button>
+	<button onclick="hitungTan()">Hitung Tan</button>
+	<br>
+	<br>
+	<p>Sin: <span id="hasilSin"></span></p>
+	<p>Cos: <span id="hasilCos"></span></p>
+	<p>Tan: <span id="hasilTan"></span></p>
+	
+	<script>
+	function hitungSin() {
+  var sudut = document.getElementById("sudut").value;
+  var sin = Math.sin(sudut * Math.PI / 180);
+  document.getElementById("hasilSin").innerHTML = sin.toFixed(2);
+}
+
+function hitungCos() {
+  var sudut = document.getElementById("sudut").value;
+  var cos = Math.cos(sudut * Math.PI / 180);
+  document.getElementById("hasilCos").innerHTML = cos.toFixed(2);
+}
+
+function hitungTan() {
+  var sudut = document.getElementById("sudut").value;
+  var tan = Math.tan(sudut * Math.PI / 180);
+  document.getElementById("hasilTan").innerHTML = tan.toFixed(2);
+}
+</script>
+	
+	
+</body>
+</html>
